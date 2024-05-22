@@ -8,9 +8,7 @@ public:
         s[i]=s[n-1-i];
         s[n-1-i]=temp;
        }
-       for(int i=0;i<n;i++){
-       cout<<s[i];
-       }
+      
        
     }
 };
