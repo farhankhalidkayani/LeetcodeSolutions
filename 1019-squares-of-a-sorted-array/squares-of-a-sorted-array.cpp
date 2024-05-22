@@ -5,19 +5,6 @@ public:
         for(int i=0;i<n;i++){
             nums[i]=nums[i]*nums[i];
         }
-        for(int k=1;k<n;k++){
-            bool flag=0;
-            for(int i=0;i<n-k;i++){
-                if(nums[i]>nums[i+1]){
-                 int temp=nums[i];
-                 nums[i]=nums[i+1];
-                 nums[i+1]=temp;
-                 flag=1;
-                }
-            }
-            if(flag==0){
-                break;
-            }
-        }
+       sort(nums.begin(),nums.end());
    return nums; }
 };
