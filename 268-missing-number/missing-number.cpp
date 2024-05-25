@@ -10,6 +10,7 @@ for(int i=0;i<=n;i++){
     itr=find(nums.begin(),nums.end(),i);
     if(itr==nums.end()){
         answer=i;
+        break;
     }
 }
         
