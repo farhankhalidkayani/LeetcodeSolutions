@@ -1,12 +1,12 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        countMap={}
+      
+         Myset = set()
 
-        for num in nums:
-            if num not in countMap:
-                countMap[num]=1
-            else:
-                countMap[num]+=1
+         for num in nums:
+            if num in Myset:
                 return True
-        return False
+            else:
+                Myset.add(num)    
+         return False
         
