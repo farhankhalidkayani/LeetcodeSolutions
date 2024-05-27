@@ -2,12 +2,12 @@ class Solution(object):
     def findDifference(self, nums1, nums2):
         
         result=[[],[]]
-        hash1={}
-        hash2={}
+        hash1=set()
+        hash2=set()
         for i in nums1:
-            hash1[i]=1
+            hash1.add(i)
         for i in nums2:
-            hash2[i]=1
+            hash2.add(i)
         for c in hash1:
             if c not in hash2:
                 result[0].append(c)
