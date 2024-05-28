@@ -1,8 +1,8 @@
 class Solution(object):
     def missingNumber(self, nums):
-        hashset=set(nums)
-        for i in range(len(nums)+1):
-            if i not in hashset:
-                return i
+        n=len(nums)
+        actual=n*(n+1)/2
+        result=sum(nums)
+        return actual-result
         
         
