@@ -10,14 +10,13 @@ class Solution(object):
             stack.append(head.val)
             head=head.next
 
-        left=0
-        right=len(stack)-1
+        currsum=0
         Sum=0
-        while left<right:
-            if stack[left]+stack[right]>Sum:
-                Sum=stack[left]+stack[right]
-            left+=1
-            right-=1
+        while stack:
+            currsum=stack.pop(0)+stack.pop()
+            if currsum>Sum:
+                Sum=currsum
+            
         return Sum
 
         
