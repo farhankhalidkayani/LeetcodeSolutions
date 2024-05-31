@@ -1,7 +1,6 @@
 class Solution(object):
     def isIsomorphic(self, s, t):
-        if len(s)!=len(t):
-            return False
+        
         hashtable1={}
         hashtable2={}
         for i,c in enumerate(s):
