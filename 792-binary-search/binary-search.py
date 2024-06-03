@@ -5,9 +5,8 @@ class Solution:
         while left<=right:
             mid=round((left+right)/2)
             
-            if target==nums[mid]:
-                return mid
-            elif target > nums[mid]:
+            
+            if target > nums[mid]:
                 left=mid+1
                 
                 continue
@@ -15,6 +14,8 @@ class Solution:
                 right=mid-1
                 
                 continue
+            else:
+                return mid
         return -1
 
         
