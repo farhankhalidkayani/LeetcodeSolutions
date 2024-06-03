@@ -3,7 +3,7 @@ class Solution:
         left,right=0,len(nums)-1
         
         while left<=right:
-            mid=round((left+right)/2)
+            mid=(left+right)//2
             if target > nums[mid]:
                 left=mid+1
             elif target <nums[mid]:
