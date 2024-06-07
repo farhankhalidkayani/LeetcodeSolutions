@@ -4,11 +4,9 @@ class Solution:
         res=[]
         for i in range(len(names)):
             hashtable[heights[i]]=names[i]
+        heights.sort(reverse=True)
         for i in range(len(names)):
-            res.append(hashtable[max(hashtable)])
-            hashtable.pop(max(hashtable))
-
-            
+            res.append(hashtable[heights[i]])
         return res
         
         
