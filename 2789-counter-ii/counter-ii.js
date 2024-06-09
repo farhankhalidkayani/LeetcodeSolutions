@@ -4,12 +4,16 @@
  */
 var createCounter = function(init) {
     let org=init;
-    const increment=()=> ( ++init);
-    const decrement=()=>( --init);
-    const reset=()=>{
+    function increment(){
+        return ++init;
+    };
+    function decrement(){
+        return --init;
+    };
+    function reset(){
         init=org;
         return init;
-    };
+    }
     return{
         increment,
         decrement,
