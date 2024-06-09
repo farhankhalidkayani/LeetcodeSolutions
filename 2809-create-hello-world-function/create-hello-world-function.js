@@ -1,11 +1,11 @@
 /**
  * @return {Function}
  */
-const createHelloWorld=()=>{
-    return (...args)=>{
-        return "Hello World";
-    };
-};
+const createHelloWorld=()=>(
+     (...args)=>(
+         "Hello World"
+)
+);
 /**
  * const f = createHelloWorld();
  * f(); // "Hello World"
