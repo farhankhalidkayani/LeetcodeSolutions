@@ -6,9 +6,9 @@ var once = function(fn) {
     let count=0;
     return function(...args){
         if(count<1){
-        let res=fn(...args);
+        
         count++;
-        return res;}
+        return fn(...args);}
         else{
             return;
         }
