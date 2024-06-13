@@ -30,5 +30,11 @@ class Solution:
                 arr[k]=R[j]
                 k+=1
                 j+=1
-        mergeSort(nums,0,len(nums))
+        for i in range(1,len(nums)):
+            j=i-1
+            while j>=0 and nums[j]>nums[j+1]:
+                temp=nums[j]
+                nums[j]=nums[j+1]
+                nums[j+1]=temp
+                j-=1
         
