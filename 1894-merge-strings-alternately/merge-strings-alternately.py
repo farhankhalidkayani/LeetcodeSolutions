@@ -1,5 +1,5 @@
-class Solution(object):
-    def mergeAlternately(self, word1, word2):
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
         left=0
         right=0
         result=[]
@@ -13,5 +13,3 @@ class Solution(object):
                 
                 
         return "".join(result)
-
-        
