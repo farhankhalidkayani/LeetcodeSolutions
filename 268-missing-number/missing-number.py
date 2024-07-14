@@ -1,8 +1,7 @@
-class Solution(object):
-    def missingNumber(self, nums):
-        n=len(nums)
-        actual=n*(n+1)/2
-        result=sum(nums)
-        return actual-result
-        
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        hashset=set(nums)
+        for i in range(len(nums)+1):
+            if i not in hashset:
+                return i
         
