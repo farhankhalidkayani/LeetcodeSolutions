@@ -1,14 +1,15 @@
-class Solution(object):
-    def isValid(self, s):
+class Solution:
+    def isValid(self, s: str) -> bool:
+        parenthesis={')':'(', '}':'{',  ']':'['  }
         stack=[]
-        Hash={"}":"{","]":"[",")":"("}
-
-        for c in s:
-                if c in Hash:
-                    if stack and stack[-1]==Hash[c]:
-                        stack.pop()
-                    else:
-                        return False
+        for par in s:
+            if par in parenthesis:
+                if stack and stack[-1]==parenthesis[par]:
+                    stack.pop()
                 else:
-                    stack.append(c)
+                    return False
+            else:
+                stack.append(par)
         return True if not stack else False
+            
+        
