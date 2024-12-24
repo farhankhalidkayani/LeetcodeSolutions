@@ -3,24 +3,19 @@ class MyStack:
 
     def __init__(self):
         self.queue1=deque()
-        self.queue2=deque()
         
 
     def push(self, x: int) -> None:
         self.queue1.append(x)
+        for _ in range(len(self.queue1)-1):
+            self.queue1.append(self.queue1.popleft())
 
     def pop(self) -> int:
-        for i in range(len(self.queue1)-1):
-            x=self.queue1.popleft()
-            self.queue2.append(x)
-        for i in range(len(self.queue2)):
-            x=self.queue2.popleft()
-            self.queue1.append(x)
         return self.queue1.popleft()
         
 
     def top(self) -> int:
-        return self.queue1[-1]
+        return self.queue1[0]
         
 
     def empty(self) -> bool:
