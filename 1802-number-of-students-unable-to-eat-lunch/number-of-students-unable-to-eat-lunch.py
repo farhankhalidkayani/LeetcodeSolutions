@@ -1,12 +1,19 @@
-class Solution(object):
-    def countStudents(self, students, sandwiches):
-        result=len(students)
-        hashtable=Counter(students)
-        for c in sandwiches:
-            if hashtable[c]>0:
-                result-=1
-                hashtable[c]-=1
+from collections import deque
+class Solution:
+    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+        students=deque(students)
+        sandwiches=deque(sandwiches)
+        count=0
+        while len(students)!=0 and count!=len(students):
+            if(students[0]==sandwiches[0]):
+                students.popleft()
+                sandwiches.popleft()
+                count=0
+            
             else:
-                return result
-        return result
+                student= students.popleft()
+                students.append(student)
+                count+=1
+        return len(students)
+            
         
